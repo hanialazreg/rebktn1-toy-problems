@@ -17,17 +17,23 @@ var firstNonRepeatedCharacter = function(string) {
   var nbRepeatChar = 1;
   var obj={};
   var arrIndex = [];
+  var arrNon = [];
   	for (var i = 0; i < strChar.length; i++) {
   	 	for (var j = 1; i < strChar.length; j++) {
   	 		if(strChar[i] === strChar[j]){
 
   	 			nbRepeatChar ++;
   	 			obj.strChar[i].value = nbRepeatChar;
-  	 			arrIndex.push()
+  	 			arrIndex.push(obj.strChar[i])
 
 
   	 		}
   	 	}
   	 } 
-  	 
+ for (var i = 0; i < arrIndex.length; i++) {
+ 	if(arrIndex[i].value === 1){
+ 		arrNon.push(arrIndex[i]);
+ 	}
+ }
+ return arrNon[0];
 };
