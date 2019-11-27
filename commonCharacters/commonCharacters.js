@@ -11,7 +11,41 @@
  */
 
 
-
 var commonCharacters = function(string1, string2) {
-  // TODO: Your code here!
+  // i will go throw the first string and for each caracter i will test if existe 
+  // in the second string , if yes put it in a new string, then delete all repeated characters.
+  var str = "";
+  for (var i = 0; i < string1.length; i++) {
+  	 	
+  		if(find(string1[i],string2)){
+  			str = str + string1[i];
+  		}
+  	}
+// str contain all exist character from string1 in string2 even they are repeated
+// we should delete repeated characters.
+var newstr = "";
+for (var i = 0; i < str.length; i++) {
+	for (var j = 1; i < str.length; j++) {
+		if( str[i] === str[j]){
+			newstr = str.substring(i,i+1);
+		}
+	}
+	str[i]
+}
+
+
+
+
+  	return newstr;
+  
 };
+
+function find(char, string){
+	var fnd = false;
+	for (var i = 0; i < string.length; i++) {
+		if(char === string[i]){
+			return true;
+		}
+		return false;		
+	}
+}
