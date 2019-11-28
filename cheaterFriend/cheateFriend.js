@@ -17,3 +17,37 @@
 //
 // Example:
 // removNb(26) should return [ {15, 21}, {21, 15} ]
+
+function removNb(n){
+	var result = [];
+	var sum = 0;
+	var product = 1;
+	var total;
+	var obj = {};
+	var key = 1;
+	for (var i = 0 ; i < n+1; i++) {
+		sum+= i ;
+	}
+
+	while(key<n){
+
+		for (var i = 1; i < n-1 ; i++) {
+			for (var j = 2; j < n; j++) {
+				product = i * j;
+				total = sum - (i + j);
+				if(product === total){
+
+					obj[1]= i;
+					obj[2]= j;
+					result.push(obj);
+
+				}
+
+			}
+		}
+		key++;
+
+	}
+	return result ;
+}
+
