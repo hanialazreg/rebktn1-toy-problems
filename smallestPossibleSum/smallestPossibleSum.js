@@ -28,3 +28,27 @@
 // Additional notes:
 
 // There are performance tests consisted of very big numbers and arrays of size at least 30000. Please write an efficient algorithm to prevent timeout.
+function smallestPossibleSum(array){
+	// for this problem we need to store the last value of the index of the greatest X[i] in the last transformation and his last value so we need to use a stack 
+	// every time the transformation is done we add to the stack and we should retreive the
+	//last value from the stack for the next transformation .
+	// our stope condition here is that there is no x[i]> x[j].
+	//the output of the function is the sum of all element of the array .
+	var sum = 0 ;
+	var stack = {};//our stack 
+	var first = max(array);
+	
+
+
+
+
+	return sum ; 
+}
+
+// function to get the greatest x[i]
+function max(arr){
+// traitment 
+//
+//
+	return max;
+}
