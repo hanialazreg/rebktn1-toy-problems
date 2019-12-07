@@ -58,7 +58,8 @@ function charMove(char){
 		return "e"
 	}
 	if((char.charCodeAt(0) - 122 ) < 10){
-	return newChar = String.fromCharCode(97 + (char.charCodeAt(0) - 122 ));
+	return newChar = String.fromCharCode(97 + (char.charCodeAt(0) - 122  ));
 	}
+	return newChar = String.fromCharCode(char.charCodeAt(0) + 9) ;
 
 }

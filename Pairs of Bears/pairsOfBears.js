@@ -17,6 +17,41 @@ and true if the number is more than or equal to x, false if not:
 x will always be a positive integer, and s will never be empty
 
 - regular expression is not allow 
+B8 8 8B B
 
+// */  
 
-*/
+function mattingPair(num, string){
+	var state = false ;
+	var count = 0;
+	var str = "";
+	var arr = [];
+	for (var i = 0; i < string.length; i++) {
+		if(string[i] === "B" && string[i+1] === "8"){
+			str+= string[i]+ string[i+1];
+			count ++ ;
+		}
+		else
+			if(string[i] === "8" && string[i+1] === "B"){
+				str+= string[i]+ string[i+1];	
+				count ++ ;
+			}
+	
+	}
+	if(count > num -1){
+		state = true ;
+	}
+	arr.push(str);
+	arr.push(state);
+	return arr ;
+
+}
+
+// testing regular expression for the first time 
+function mattingPair(num, string){
+	var regexp = new RegExp('B8',g)
+	var regexp1 = new RegExp('8B',g)
+	return (s) =>(/regexp/,/regexp1/ function(){
+		// traitmenttttt 
+	})
+}
