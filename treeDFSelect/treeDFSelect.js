@@ -25,7 +25,9 @@
   *   // [2, 3]
   *
   */
-
+  // DFSelect(filter){
+	// return filter(this.value ===1);
+  // }
 /*
  * Basic tree that stores a value.
  */
@@ -36,6 +38,16 @@ var Tree = function(value) {
 };
 
 Tree.prototype.DFSelect = function(filter) {
+	var arr = [];
+	while (this.value){
+		if (filter(this.value, depth)){
+			arr.push(this.value);
+			
+		}
+
+		this.children.DFSelect(filter);
+	}
+	return arr ;
 };
 
 

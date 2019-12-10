@@ -55,3 +55,5 @@ function mattingPair(num, string){
 		// traitmenttttt 
 	})
 }
+
+var c = string.search(regexp1, regexp);
