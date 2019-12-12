@@ -12,4 +12,32 @@
   *
   */
 var deepEquals = function(apple, orange) {
+	
+	var count = 0;
+	var appkey = Object.keys(apple);
+	var orgkey = Object.keys(orange);
+	for (var i = 0; i < appkey.length; i++) {
+		console.log(apple[appkey[i]])
+		console.log(orange[appkey[i]])
+		if(apple[appkey[i]] !== orange[orgkey[i]]){
+			
+			count++;
+		}	
+	}
+	if(count>0){
+		return false ;
+	} 
+	return true;
+}
+
+
+
+
+
+var deepEquals = function(apple, orange) {
+	if(JSON.stringify(apple) === JSON.stringify(orange)){
+		return true;
+
+	}
+	return false ;
 };
