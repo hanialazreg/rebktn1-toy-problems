@@ -9,4 +9,21 @@ parseQueryString("http://example.com?msg=hello%20world") // [ [ "msg", "hello wo
 parseQueryString("http://example.com") // undefined
 */
 
-function parseQueryString(url) {}
+function parseQueryString(url) {
+	//var decode = encodeURI(url);
+	var decode = decodeURIComponent(url);
+	
+	var arr = [];
+	var sarr =[];
+
+	for (var i = 0; i < decode.length; i++) {
+			if(decode[i] === "="){
+			sarr.push(decode[i-1]);
+			}
+		
+	}
+	
+	var regexp = new RegExp(decode,'&');
+	var arr = regexp.exec(decode);
+
+}
