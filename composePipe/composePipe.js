@@ -32,9 +32,19 @@
  */
 
 'use strict';
+//difference between compose and pipe is that compose is moving from right to left 
+// and pipe is moving from left to right .
 
-var compose = function() {
+var compose = (...funcs) =>(arg) => 
+
+	
 };
 
-var pipe = function() {
+
+var pipe = (func1, func2) => args 
+
 };
+
+
+
+
