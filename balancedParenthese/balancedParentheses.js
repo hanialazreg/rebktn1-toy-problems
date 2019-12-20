@@ -9,19 +9,18 @@ isBalanced("") //	true
 */
 
 var isBalanced = function(str) {
-	var arr = str.split('');
+	
 	var countOpen = 0 ;
 	var countClose = 0;
-	for (var i = 0; i < arr.length; i++) {
-		if(arr[i] === "(" ){
+	for (var i = 0; i < str.length; i++) {
+		if(str[i] === "(" ){
 			 countOpen++;
 		}
-	}
-	for (var i = 0; i < arr.length; i++) {
-		if(arr[i] === ")" ){
+		if(str[i] === ")" ){
 		 countClose++;
 		}
 	}
+	
 	if(countOpen === countClose){
 		return true ;
 	}else {
