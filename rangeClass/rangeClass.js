@@ -39,16 +39,46 @@
  */
 
 
-var Range = function(start, end, step) {
+var Range = function(start, end, step = 1) {
+	this.start = start ;
+	this.end = end ;
+	this.step = step;
 };
 
 Range.prototype.size = function () {
+	var str = "";
+	var counter = 0;
+	if(this.start === 'undefined'){
+		return null ;
+	}
+	else if(this.step < 0 || this.start > this.end){
+		if(step){
+			while(this.start - this.step > this.end){
+				str = str + "," + this.start - this.step;
+				counter++ ;
+				this.strat = this.start - this.step; 
+			}
+		}
+	}
+	if(this.start && this.end && this.step && this.start < this.end)
+		while(this.start - this.step < this.end){
+			str = str + "," + this.start - this.step;
+			counter++ ;
+			this.strat = this.start - this.step; 
+		}
+	return counter, str;
 };
 
 Range.prototype.each = function (callback) {
+
+
+
 };
 
 Range.prototype.includes = function (val) {
+	var rang = this.size();
+	
+
 };
 
 var range = new Range(1);
