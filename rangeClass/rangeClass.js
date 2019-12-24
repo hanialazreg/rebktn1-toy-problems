@@ -38,6 +38,8 @@
  * evenNumbers.includes(2) should be true, evenNumbers.includes(3) should be false
  */
 
+// i need to return the rang itself and the size in size function to use it later on includes 
+// 
 
 var Range = function(start, end, step = 1) {
 	this.start = start ;
@@ -77,7 +79,7 @@ Range.prototype.each = function (callback) {
 
 Range.prototype.includes = function (val) {
 	var rang = this.size();
-	
+
 
 };
 

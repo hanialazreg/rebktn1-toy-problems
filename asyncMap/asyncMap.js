@@ -36,7 +36,17 @@
  *
  *
  */
-
+// we have asynchronous functions so we are waiting for a promise , i sghould use .then to acces to
+// data inside a promise .
 
 var asyncMap = function(tasks, callback) {
+
+	tasks.forEach(element => result)
+	.then(functions(results));
+
+	callback(result)=>{
+		return results ;
+	}
+
+
 };
