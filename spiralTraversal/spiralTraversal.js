@@ -42,3 +42,13 @@ spiralTraversal([[ 1 ], [ 2 ], [ 3 ], [ 4 ]])	// [ 1, 2, 3, 4 ]
 
 spiralTraversal([[ 1, 2, 3, 4, 5, 6, 7 ]]) // [ 1, 2, 3, 4, 5, 6, 7 ]
 */
+
+var spiralTraversal = function(array){
+	var result = [];
+	if(array.length == 0){
+		return;
+	} else 
+	// get the row length 
+
+
+}

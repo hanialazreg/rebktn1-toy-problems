@@ -87,3 +87,39 @@ Tree.prototype.removeChild = function(child) {
     throw new Error('That node is not an immediate child of this tree');
   }
 };
+
+Tree.prototype.countLeaves = function() {
+
+	leaves = 0 ;
+
+	if (this.children.length === 0){
+		leaves ++ ; 
+		return leaves;
+	}
+
+
+	function traverseleaves(treenode) {	
+		var count = 0;
+		for (var i = 0; i < treenode.children.length; i++) {
+		// count leaves in children
+			if(treenode.children[i].children.length === 0){
+			count ++ ;
+			return count;
+
+			}
+			else {
+			traverseleaves(treenode.children[i])
+			}
+		}
+	}
+	
+
+	
+	traverseleaves(this)
+
+	return leaves ;
+};
+
+
+
+ 
