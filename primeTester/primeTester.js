@@ -9,4 +9,19 @@ primeTester(1) // false
 
 */
 
-function primeTester(n) {}
+function primeTester(n) {
+	
+	if( typeof(n) !== "number" || n <= 0 || n === 1  ) {
+		return false 
+	}
+
+	
+
+	for (var i = 2; i < n ; i++) {
+		if (n % i === 0){
+			return false
+		}	
+	}
+	
+	return true;
+}
