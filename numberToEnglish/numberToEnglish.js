@@ -55,4 +55,8 @@ var numbersToPlace = {
 
 function numberToEnglish(number) {
   // your code here...
+number.toString();
+if(number.lenght > 0 && number.lenght<3){
+	return numbersToWords(number);
+}
 }

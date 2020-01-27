@@ -27,6 +27,22 @@ function Node(val) {
   return obj;
 }
 
+// we will use tortoise and hare algorithm ,
+// declare two pointer one is tortoise started at 0 and the second is hare started at 1 , while the second has next move
+// the tortoise pointer by 1 and the hare pointer by two , if they meet so there is a cycle in the linked list.
+ 
 var hasCycle = function(linkedList) {
-  // your code here...
+	let tortoise = linkedList;
+	let hare = linkedList;
+
+	while( hare && hare.next){
+		tortoise = hare.next;
+		hare = hare.next.next ;
+		if(tortoise === hare){
+			return true ;
+		}
+	}
+	return false ;
+  
 };
+
