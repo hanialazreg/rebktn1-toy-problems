@@ -36,5 +36,15 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 var flatten = function (root) {
+	var node = root.val;
+	var left = node.left;
+	var right = node.right;
+	// the solution consiste in traverse the tree stor every node in an array and after that create 
+	// a linked list and store the value there .
+	 
+
+
+
+
 
 };

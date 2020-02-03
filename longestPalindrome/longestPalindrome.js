@@ -6,5 +6,16 @@ Other palindromes in the above string include "dad", "ete", " dad " (including w
 */
 
 function longestPalindrome(string) {
-  // your code here...
+  
+  let palmax = ""
+  for (var i = 0; i < string.length; i++) {
+  	for (var j = 0; i < string.length; j++) {
+  		var slisedstr= string.slice(i,j)
+  		if((slisedstr) === slisedstr.split().revese().join() && slisedstr.length > palmax){
+  			palmax = slisedstr ;
+  		}
+  	}
+  }
+  return palmax ;
 }
+

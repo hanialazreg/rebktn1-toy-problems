@@ -47,5 +47,7 @@ Stack.prototype.pop = function() {
 };
 
 function sortedInsert(stack, element) {
-  // your code here...
+  // if it is empty so just insert the element else looping on the variable of the stack put the element 
+  // in an array then whene finding the element insert it and push the other element from the array .
+  
 }
