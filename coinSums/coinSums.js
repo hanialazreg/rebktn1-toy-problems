@@ -22,5 +22,15 @@ In other words, find all the possible combinations of coins that sum to a given 
 var coins = [1, 2, 5, 10, 20, 50, 100, 200];
 
 function coinSums(total) {
-  // your code here...
+  // test first the given number and try to place it to know wich pence will we use .
+  var arr =[]
+  var str=""
+  for (var i = 0; i < coins.length; i++) {
+  	if(total>coins[i]){
+  		arr.push(coins[i])
+  	}
+  	for (var j = arr.length; j >0 ; j--) {
+  		str = total % arr[j]
+  	}
+  }
 }

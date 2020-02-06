@@ -11,5 +11,17 @@ toMilitary("04:00") // "04:00"
 */
 
 function toMilitary(time) {
-  // your code here...
-}
+	var str = time.slice(time.length-2 , time.length)
+	console.log(str)
+	if(str === "am"){
+		return time ;
+	} else 
+	for (var i = 0; i < time.indexOf(":"); i++) {
+		var fstr = "";
+		fstr+= time[i]
+	}
+	var pmtime = parseInt(fstr, 10);
+	pmtime += 12;
+	var newtime = time.replace(fstr, pmtime);
+	return newtime.substr(0, newtime.length-2)
+  }
