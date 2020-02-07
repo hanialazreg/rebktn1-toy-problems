@@ -19,5 +19,15 @@ volume([1,2,3,2,1]) // 0
 */
 
 function volume(heights) {
-  // your code here...
+  // try to find 0 and get the the min value of the two number between 0
+  var index = heights.indexOf(0);
+  console.log(index)
+  function min(a, b){
+  	return (a>b ? b : a)
+  }
+  if(index > 0){
+  return min(heights[index-1], heights[index+1])
+  } else 
+  
+  return 0 
 }
